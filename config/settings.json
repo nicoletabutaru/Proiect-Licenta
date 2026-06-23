@@ -1,0 +1,39 @@
+{
+    "dataset": {
+        "path": "data/appointments.csv",
+        "target_column": "Attended"
+    },
+    "topics": [
+        "diabetes", "hypertension", "sms", "gender", 
+        "age_group", "alcoholism", "scholarship", "overall"
+    ],
+    "filters": {
+        "Gender": {
+            "F": ["female", "women", "woman", "girls"],
+            "M": ["male", "men", "man", "boys", "males"]
+        },
+        "AgeGroup": {
+            "Child": ["child", "children"],
+            "Young Adult": ["young", "youth", "young adult"],
+            "Adult": ["adult", "adults"],
+            "Senior": ["senior", "elderly", "old", "older"]
+        },
+        "Diabetes": { "1": ["diabetes", "diabetic"] },
+        "Hipertension": { "1": ["hypertension", "hypertensive"] },
+        "Alcoholism": { "1": ["alcohol", "alcoholic", "alcoholism"] },
+        "Scholarship": { "1": ["scholarship", "aid", "support"] },
+        "SMS_received": {
+            "0": ["no sms", "without sms", "not received"],
+            "1": ["sms", "reminder"]
+        }
+    },
+    "reasoning": {
+        "diabetes": "Reasoning: Patients with chronic conditions generally have higher attendance because their health requires strict routine monitoring.",
+        "hypertension": "Reasoning: Hypertension requires constant medical supervision, which usually motivates patients to respect their appointments.",
+        "sms": "Reasoning: SMS reminders help, but structural barriers (like transportation) might still prevent attendance even if reminded.",
+        "gender": "Reasoning: Statistically, women tend to be more proactive regarding preventative healthcare.",
+        "alcoholism": "Reasoning: Alcoholism can affect cognitive focus and daily management, leading to a higher rate of missed appointments.",
+        "scholarship": "Reasoning: Scholarship recipients (social welfare) might face structural barriers such as lack of transportation or inflexible work hours.",
+        "age_group": "Reasoning: Senior patients often show higher attendance due to a higher frequency of age-related health issues."
+    }
+}
